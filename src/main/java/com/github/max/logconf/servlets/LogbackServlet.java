@@ -3,12 +3,8 @@ package com.github.max.logconf.servlets;
 import ch.qos.logback.classic.Logger;
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
-import com.github.max.logconf.base.ConfigHelper;
-import com.github.max.logconf.base.SimpleHttpClient;
-import com.github.max.logconf.base.entity.AppInfo;
 import com.github.max.logconf.entity.LogFileInfo;
 import com.github.max.logconf.entity.LoggerConfig;
-import com.github.max.logconf.base.entity.ProcessInfo;
 import com.github.max.logconf.helper.*;
 import com.google.common.base.Preconditions;
 import com.google.common.base.Strings;
@@ -171,65 +167,5 @@ public class LogbackServlet extends HttpServlet {
         json.put("status", status);
         json.put("data", data);
         return json.toJSONString();
-    }
-
-    @Override
-    public void destroy() {
-        try {
-            AppInfo ai = getAppInfo();
-            String params = String.format("?ip=%s&port=%s&app=%s&processName=%s", ai.getIp(), ai.getPort(), ai.getApp(), ai.getProcessName());
-            String url = logConfWeb + Constant.UNREGISTER_URI + params;
-            log.info("unregister logController, url={}", url);
-            SimpleHttpClient.get(url);
-        } catch (Exception e) {
-            log.error("Cannot unregister from logconf. ", e);
-        }
-    }
-
-    @Override
-    public void init() throws ServletException {
-        // FIXME 可注册到服务中心，统一展示所有服务并可进行修改
-        if (!Strings.isNullOrEmpty(ConfigHelper.getProcessInfo().getPort())) {
-            String port = System.getenv("xxx_PORT");
-            if (!Strings.isNullOrEmpty(port)) {
-                // 运行在k8s中，直接使用service名字
-                logConfWeb = "http://xxx/logconf";
-            } else {
-                String profile = ConfigHelper.getProcessInfo().getProfile();
-                if (StringUtils.equals(profile, "xxx")) {
-                    logConfWeb = "http://xxx/logconf";
-                } else {
-                    logConfWeb = "http://xxx/logconf";
-                }
-            }
-
-            lazyRegister();
-        } else {
-            log.info("Cannot detect container port, will not register to logconf.");
-        }
-        log.info("{} init", this);
-    }
-
-    private void lazyRegister() {
-        new Thread(() -> {
-            try {
-                AppInfo ai = getAppInfo();
-                String params = String.format("?ip=%s&port=%s&app=%s&processName=%s", ai.getIp(), ai.getPort(), ai.getApp(), ai.getProcessName());
-                String url = logConfWeb + Constant.REGISTER_URI + params;
-                log.info("Register to logController url={}", url);
-                SimpleHttpClient.get(url);
-            } catch (Exception e) {
-                log.error("Cannot register to logController. ", e);
-            }
-        }).start();
-    }
-
-    private AppInfo getAppInfo() {
-        ProcessInfo info = ConfigHelper.getProcessInfo();
-        String ip = info.getIp();
-        String port = info.getPort();
-        String appName = StringUtils.substringAfter(this.getServletContext().getContextPath(), "/");
-        String processName = info.getName();
-        return new AppInfo(ip, port, appName, processName);
     }
 }

@@ -9,7 +9,6 @@ public interface Constant {
 
     int OK = 0;
     int ERROR = 1;
-    int DELAY_SECONDS = 15;
 
     String CONTENT_TYPE = "text/json;charset=UTF-8";
 
@@ -34,13 +33,4 @@ public interface Constant {
      * 查询最近N行日志
      */
     String PEEK_FILE_URI = "/peekFile";
-
-    /**
-     * 注册到配置中心
-     */
-    String REGISTER_URI = "/register";
-    /**
-     * 解注册配置中心
-     */
-    String UNREGISTER_URI = "/unregister";
 }
