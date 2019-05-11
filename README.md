@@ -67,7 +67,7 @@ jar包中的`LogbackServlet`通过`web-fragment`会自动注册到服务中，ja
 
 - **num**[选填]：tail的行数，默认1000。
 
-示例：http://localhost:8081/logback/peekFile?file=admin.log&num=10
+示例：http://localhost:8080/logback/peekFile?file=admin.log&num=10
 
 
 
