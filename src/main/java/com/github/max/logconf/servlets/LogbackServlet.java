@@ -26,8 +26,6 @@ import java.util.stream.Collectors;
 
 /**
  * Logback servlet, 提供logback修改配置接口
- *
- * @author max
  */
 @Slf4j
 @SuppressWarnings("serial")

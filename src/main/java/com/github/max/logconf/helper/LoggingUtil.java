@@ -24,8 +24,6 @@ import java.util.Set;
 
 /**
  * 对logback操作类
- *
- * @author max
  */
 public class LoggingUtil {
 

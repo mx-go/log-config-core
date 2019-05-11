@@ -2,17 +2,13 @@ package com.github.max.logconf.helper;
 
 /**
  * @description: 常量
- * @author: max
- * @date: 2019-05-10 22:16
  **/
 public interface Constant {
 
     int OK = 0;
     int ERROR = 1;
-    int DELAY_SECONDS = 15;
 
     String CONTENT_TYPE = "text/json;charset=UTF-8";
-
 
     /**
      * 获取所有logger level信息
@@ -21,7 +17,7 @@ public interface Constant {
     /**
      * 获取单个logger level信息
      */
-    String GET_LOGGER_URI = "/getLer";
+    String GET_LOGGER_URI = "/getLogger";
     /**
      * 设置logger level
      */
