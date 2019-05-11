@@ -20,7 +20,7 @@ public interface Constant {
     /**
      * 获取单个logger level信息
      */
-    String GET_LOGGER_URI = "/getLer";
+    String GET_LOGGER_URI = "/getLogger";
     /**
      * 设置logger level
      */
