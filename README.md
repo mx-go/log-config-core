@@ -1,5 +1,7 @@
 # log-config-core
-**项目必须使用logback作为日志输出组件**。具体使用可参照：[http://rainbowhorse.site/%E5%8A%A8%E6%80%81%E4%BF%AE%E6%94%B9%E6%97%A5%E5%BF%97%E7%BA%A7%E5%88%AB/](http://rainbowhorse.site/动态修改日志级别/)
+**项目必须使用logback作为日志输出组件**。
+
+具体使用可参照：[http://rainbowhorse.site/%E5%8A%A8%E6%80%81%E4%BF%AE%E6%94%B9%E6%97%A5%E5%BF%97%E7%BA%A7%E5%88%AB/](http://rainbowhorse.site/动态修改日志级别/)
 
 # 引入Maven坐标
 
