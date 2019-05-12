@@ -24,8 +24,6 @@ import java.util.Set;
 
 /**
  * 对logback操作类
- *
- * @author max
  */
 public class LoggingUtil {
 
@@ -111,7 +109,6 @@ public class LoggingUtil {
                 }
             }
         });
-
         return appenders;
     }
 
@@ -167,5 +164,4 @@ public class LoggingUtil {
         String levelUpperCase = StringUtils.upperCase(level);
         return ALL_LOG_LEVEL.contains(levelUpperCase);
     }
-
 }

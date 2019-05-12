@@ -63,7 +63,6 @@ public class FileUtil {
         } catch (IOException e) {
             LOG.error("Cannot read from file {}", path, e);
         }
-
         return Lists.newArrayList(lineQueue);
     }
 

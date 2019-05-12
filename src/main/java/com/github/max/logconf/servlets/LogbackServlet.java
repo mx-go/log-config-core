@@ -22,8 +22,6 @@ import java.util.stream.Collectors;
 
 /**
  * Logback servlet, 提供logback修改配置接口
- *
- * @author max
  */
 @Slf4j
 @SuppressWarnings("serial")
@@ -130,7 +128,7 @@ public class LogbackServlet extends HttpServlet {
         String num = getParam(req, "num", "1000");
 
         if (StringUtils.isEmpty(file)) {
-            String msg = "文件名称不能为空";
+            String msg = "file不能为空";
             resp.getWriter().write(toJson(Constant.ERROR, msg));
             return;
         }
