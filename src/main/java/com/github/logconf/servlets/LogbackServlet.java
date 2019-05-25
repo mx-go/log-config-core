@@ -1,13 +1,15 @@
-package com.github.max.logconf.servlets;
+package com.github.logconf.servlets;
 
 import ch.qos.logback.classic.Logger;
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
-import com.github.max.logconf.entity.LogFileInfo;
-import com.github.max.logconf.entity.LoggerConfig;
-import com.github.max.logconf.helper.*;
+import com.github.logconf.helper.Constant;
+import com.github.logconf.entity.LogFileInfo;
+import com.github.logconf.entity.LoggerConfig;
+import com.github.logconf.helper.FileUtil;
+import com.github.logconf.helper.LoggingUtil;
+import com.github.logconf.helper.*;
 import com.google.common.base.Preconditions;
-import com.google.common.base.Strings;
 import com.google.common.collect.Lists;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;

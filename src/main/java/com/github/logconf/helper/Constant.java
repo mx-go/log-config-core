@@ -1,4 +1,4 @@
-package com.github.max.logconf.helper;
+package com.github.logconf.helper;
 
 /**
  * @description: 常量

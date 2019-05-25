@@ -10,7 +10,7 @@
     </ordering>
     <servlet>
         <servlet-name>logconf</servlet-name>
-        <servlet-class>com.github.max.logconf.servlets.LogbackServlet</servlet-class>
+        <servlet-class>com.github.logconf.servlets.LogbackServlet</servlet-class>
         <load-on-startup>1</load-on-startup>
     </servlet>
     <servlet-mapping>

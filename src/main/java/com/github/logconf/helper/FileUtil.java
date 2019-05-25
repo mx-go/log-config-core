@@ -1,4 +1,4 @@
-package com.github.max.logconf.helper;
+package com.github.logconf.helper;
 
 import com.google.common.collect.Lists;
 import com.google.common.collect.Queues;

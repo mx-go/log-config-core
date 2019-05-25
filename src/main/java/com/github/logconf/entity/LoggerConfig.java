@@ -1,4 +1,4 @@
-package com.github.max.logconf.entity;
+package com.github.logconf.entity;
 
 import ch.qos.logback.classic.Logger;
 import lombok.AllArgsConstructor;

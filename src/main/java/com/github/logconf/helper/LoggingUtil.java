@@ -1,4 +1,4 @@
-package com.github.max.logconf.helper;
+package com.github.logconf.helper;
 
 import ch.qos.logback.classic.AsyncAppender;
 import ch.qos.logback.classic.Level;
@@ -7,8 +7,8 @@ import ch.qos.logback.classic.LoggerContext;
 import ch.qos.logback.classic.spi.ILoggingEvent;
 import ch.qos.logback.core.Appender;
 import ch.qos.logback.core.FileAppender;
-import com.github.max.logconf.entity.LogFileInfo;
-import com.github.max.logconf.entity.LoggerConfig;
+import com.github.logconf.entity.LogFileInfo;
+import com.github.logconf.entity.LoggerConfig;
 import com.google.common.collect.Lists;
 import com.google.common.collect.Sets;
 import org.apache.commons.lang3.StringUtils;
