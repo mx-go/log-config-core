@@ -14,8 +14,6 @@ import java.util.Queue;
 
 /**
  * File操作工具类
- *
- * @author : admin
  */
 public class FileUtil {
 

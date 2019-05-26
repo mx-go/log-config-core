@@ -1,9 +1,7 @@
 package com.github.logconf.helper;
 
 /**
- * @description: 常量
- * @author: max
- * @date: 2019-05-10 22:16
+ * 常量
  **/
 public interface Constant {
 
