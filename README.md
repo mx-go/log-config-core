@@ -7,9 +7,9 @@
 
 ```xml
 <dependency>
-	<groupId>com.github.max</groupId>
+	<groupId>com.github.mx-go</groupId>
 	<artifactId>log-config-core</artifactId>
-	<version>1.0.0-SNAPSHOT</version>
+	<version>1.0.0</version>
 </dependency>
 ```
 
